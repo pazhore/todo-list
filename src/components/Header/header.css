@@ -1,0 +1,21 @@
+*{
+    margin: 0%;
+}
+.header{
+    margin: 0;
+    padding: 1rem;
+    background-color: rgba(238, 236, 224, 0.719);
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    color: crimson;
+}
+.left{
+    display: flex;
+    justify-content: space-evenly;
+}
+button{
+    border: none;
+    background-color: crimson;
+}

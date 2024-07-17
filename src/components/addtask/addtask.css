@@ -1,0 +1,32 @@
+
+.addtask{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: honeydew;
+   
+    padding: 1rem;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline solid red;
+    text-decoration-thickness: 2px;
+}
+.form{
+    margin-top: 1rem;
+    padding: .5rem;
+    border: black solid 1px;
+
+}
+button{
+    background-color: orangered;
+    border-radius: 6PX;
+    color: white;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+input{
+    width: 80%;
+}
