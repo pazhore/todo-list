@@ -1,24 +1,42 @@
-
-.addtask{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    background-color: honeydew;
-   
+.addtask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100%;
+    background-color: #E0E0E0;
     padding: 1rem;
 }
-.heading{
+
+.sub {
+    width: 70%;
+    align-content: center;
+    background-color: #F9F9F9;
+    padding: 2rem;
+}
+
+.heading {
     display: flex;
     justify-content: space-between;
     text-decoration: underline solid red;
     text-decoration-thickness: 2px;
 }
-.form{
+
+.form {
     margin-top: 1rem;
-    padding: .5rem;
-    border: black solid 1px;
+    padding: 1rem;
+    border: #A1A3AB69 solid 1px;
 
 }
-button{
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox label{
+    color: rgb(162, 164, 167);
+}
+
+button {
     background-color: orangered;
     border-radius: 6PX;
     color: white;
@@ -27,6 +45,33 @@ button{
     padding-right: 1rem;
     margin-top: 1rem;
 }
-input{
+
+p {
+    margin-bottom: 0;
+
+}
+
+input {
+    margin-top: 0;
+    margin-bottom: 1rem;
     width: 80%;
+    border-color: #A1A3AB69;
+    border-radius: 3px;
+    border-style: 1px solid black;
+
+
+}
+
+.task {
+    height: 2rem;
+}
+
+.date {
+    width: 35%;
+    height: 1.5rem;
+}
+
+.taskdiscription {
+    height: 6rem;
+    width: 100%;
 }

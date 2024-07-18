@@ -16,10 +16,10 @@ function Header() {
             </div>
             <div className="left">
                 <div className="button">
-                    <button><IoAdd /></button>
+                    <button>+</button>
                 </div>
                 <div className="date">
-                    <p>date</p>
+                    
                 </div>
 
 

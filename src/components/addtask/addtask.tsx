@@ -1,5 +1,7 @@
 import React from 'react';
 import "../addtask/addtask.css";
+import { useState } from "react";
+
 
 import { IoAdd } from "react-icons/io5";
 import "../addtask/addtask.css"
@@ -8,26 +10,67 @@ import "../addtask/addtask.css"
 
 
 function Addtask() {
-  
-    return (
-        <div className='addtask'>
-            <div className="heading">
-                <p>Add New Task</p>
-                <p>GO Back</p>
+//       const [text, setText] = useState({
+//     taskname:"",
+//     Date:"",
+//     priority:"",
+//     discription:""
 
-            </div>
-            <div className="form">
-                <h3 >Title</h3><br />
-                <input type="text" /><br />
-                <h3 >Date</h3><br />
-                <input type="date" /><br />
-                <h3 >Task Discription</h3><br />
-                <input type="text" /><br />
-            </div>
-            <button>DONE</button>
+//   });
+//   const [task, setTASK] = useState({
+//     taskname:"",
+//     Date:"",
+//     priority:"",
+//     discription:""
+
+//   });
+//   const HandleInputChange=(event)=>{
+//     setText(event.target.value);
+
+
+//   }
+  
+
+    return (
+        <div className='addtask '>
+            <div className='sub '>
+                <div className="heading">
+                    <a>Add New Task</a>
+                    <a>GO Back</a>
+                </div>
+                <div className="form">
+                    <p >Title</p>
+                    <input className='task' type="text"  />
+                    <p >Date</p>
+                    <input className="date" type="date" />
+                    <p>Priority</p>
+                    <div className='checkbox'>
+                        <div>
+                            <label >Extreme</label>
+                            <input type="checkbox" />
+                        </div>
+                        <div>
+                        <label >Moderate</label>
+                        <input type="checkbox" />
+                        </div>
+                        <div>
+                        <label >Low</label>
+                        <input type="checkbox" />
+
+                        </div>
+
+                      
+                        
+                    </div>
+
+                    <p >Task Discription</p>
+                    <input className='taskdiscription' type="text" />
+                </div>
+                <button>DONE</button></div>
+
 
         </div>
-       
+
     );
 }
 
