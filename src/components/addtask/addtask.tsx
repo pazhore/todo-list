@@ -3,7 +3,8 @@
 import "../addtask/addtask.css";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import "../addtask/addtask.css"
+import "../addtask/addtask.css";
+import { createContext } from 'react';
 import { Button, Modal } from "react-bootstrap";
 
 
@@ -15,20 +16,22 @@ type Inputs = {
     priority: string
 
 }
+const ThemeContext = createContext('light');
 
 function Addtask() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { register, handleSubmit, reset, watch, formState: { errors }, } = useForm<Inputs>()
-    let todo:Array<Inputs> = []
+    const [list,setList]=useState<Inputs[]>([]);
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        todo.push()
+        setList([...list,data])
         reset();
 
 
     }
-    console.log(todo)
+    console.log(list)
+    
     return (
 
         <>
