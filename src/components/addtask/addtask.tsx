@@ -1,39 +1,28 @@
 
-
 import "../addtask/addtask.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import "../addtask/addtask.css";
-import { createContext } from 'react';
 import { Button, Modal } from "react-bootstrap";
-
-
-
-type Inputs = {
+import React from "react";
+import { ContextProviderProps, todoContext } from '../../context/context';
+export type Inputs={
     taskname: string
     date: Date
     discription: String
     priority: string
-
 }
-const ThemeContext = createContext('light');
-
-function Addtask() {
+const Addtask: React.FC = () => {
+    const {list, setList } = useContext(todoContext);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { register, handleSubmit, reset, watch, formState: { errors }, } = useForm<Inputs>()
-    const [list,setList]=useState<Inputs[]>([]);
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        setList([...list,data])
+        setList([...list, data])
         reset();
-
-
     }
-    console.log(list)
-    
     return (
-
         <>
             <Button variant="danger" onClick={handleShow}>
                 +
@@ -45,9 +34,8 @@ function Addtask() {
                 <Modal.Body>
                     <form onSubmit={handleSubmit(onSubmit)} >
                         <div className="form">
-
                             <p >Title</p>
-                            <input className='task' type="text"{...register("taskname", { required: true})} />
+                            <input className='task' type="text"{...register("taskname", { required: true })} />
                             <p>   {errors.taskname && <span>This field is required</span>}</p>
                             <p >Date</p>
                             <input className="date" type="date" {...register("date", { required: true })} />
@@ -60,17 +48,10 @@ function Addtask() {
                                 <label >moderate</label><br />
                                 <input type="radio" id="javascript" value="High" {...register("priority")} />
                                 <label >high</label>
-
                             </div>
-
-
-
-
-
                             <p >Task Discription</p>
-                            <textarea className='taskdiscription'  {...register("discription", { required: true})} />
+                            <textarea className='taskdiscription'  {...register("discription", { required: true })} />
                             <p>   {errors.discription && <span>This field is required</span>}</p>
-
                         </div>
                     </form>
                 </Modal.Body>
@@ -83,15 +64,7 @@ function Addtask() {
                     </Button>
                 </Modal.Footer>
             </Modal>
-
-
         </>
-
-
-
-
-
     );
 }
-
 export default Addtask;

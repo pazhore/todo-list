@@ -10,12 +10,7 @@ function Todo() {
     <div className="Todo">
       <Header />
       <Main/>
-     
-
-      
-     
     </div>
   );
 }
-
 export default Todo;
