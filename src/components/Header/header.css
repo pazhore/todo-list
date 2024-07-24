@@ -18,7 +18,9 @@
     display: flex;
     justify-content: space-evenly;
 }
-button{
+.b{
     border: none;
-    background-color: crimson;
+    background: none;
+   
+
 }

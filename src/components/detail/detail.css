@@ -1,0 +1,11 @@
+.detail{
+   
+
+    margin: 1rem;
+    border: 1px solid  #A1A3ABA1;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.list-task li{
+    list-style: decimal;
+}

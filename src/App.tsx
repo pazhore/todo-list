@@ -1,17 +1,13 @@
 import React from 'react';
-import Addtask from './components/addtask/addtask';
-import Header from './components/Header/header';
-import Todolist from './components/todo-list/todo_list';
+import Todo  from './components/todo/todo';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Todolist />
-      <Addtask/>
-      
-     
+      <Todo/>
+
     </div>
   );
 }

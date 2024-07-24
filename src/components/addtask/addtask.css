@@ -1,19 +1,19 @@
 .addtask {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding-top: 3rem;
+  
     max-width: 100%;
     background-color: #E0E0E0;
-    padding: 1rem;
-    color: black;
+   
+    color: rgb(94, 35, 35);
+    
 }
 
 .sub {
-    width: 70%;
-    align-content: center;
+
+   
     background-color: #F9F9F9;
-    padding: 2rem;
+    margin: auto;
+ 
 }
 
 .heading {
@@ -37,7 +37,8 @@
     color: rgb(162, 164, 167);
 }
 
-button {
+.button {
+    width: 100%;
     background-color: orangered;
     border-radius: 6PX;
     color: white;
@@ -68,7 +69,7 @@ input {
 }
 
 .date {
-    width: 35%;
+    width: 70%;
     height: 1.5rem;
 }
 
