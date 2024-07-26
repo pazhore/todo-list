@@ -1,10 +1,14 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import { Data } from '../main/main';
+import "../todo-list/todo_list.css";
+import { todoContext } from '../../context/context';
 interface TodolistProps {
   data: Data
 }
-const Todolist: FC<TodolistProps> = ({ data }) => {
-  const { task_name, } = data
+const Todolist: FC<TodolistProps> = () => {
+  let value = useContext(todoContext);
+const todolistmain=value?.list;
+console.log(todolistmain)
   return (
     <>
       <div className="todolist">
@@ -32,7 +36,8 @@ const Todolist: FC<TodolistProps> = ({ data }) => {
           </ul>
         </div>
       </div>
-    </>
+      </>
+    
   );
 };
 

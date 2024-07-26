@@ -1,15 +1,12 @@
 .addtask {
     padding-top: 3rem;
-
     max-width: 100%;
     background-color: #E0E0E0;
-
     color: rgb(94, 35, 35);
 }
 .sub {
   background-color: #F9F9F9;
    margin: auto;
-
 }
 .heading {
     display: flex;
@@ -19,29 +16,20 @@
 }
 .form {
     margin-top: 1rem;
+
+    padding-bottom: 0;
     padding: 1rem;
     border: #A1A3AB69 solid 1px;
+    border-radius: 5px;
 }
 .checkbox {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
 }
 .checkbox label {
     color: rgb(162, 164, 167);
 }
-.button {
-    width: 100%;
-    background-color: orangered;
-    border-radius: 6PX;
-    color: white;
-    padding: .5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 1rem;
-}
-p {
-    margin-bottom: 0;
-}
+
 input {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -52,15 +40,18 @@ input {
 }
 
 .task {
-    height: 2rem;
+    width: 100%;
 }
 
 .date {
-    width: 70%;
-    height: 1.5rem;
+    width: 100%;
+
 }
 
 .taskdiscription {
     height: 6rem;
     width: 100%;
+}
+.same{
+    margin-bottom: 1rem;
 }
