@@ -1,14 +1,5 @@
 
 import React, { createContext, FC, useState } from 'react';
-export const todoContext = createContext<TodoContext>({
-    list:[],
-    setList([
-        { taskname: ""
-            date: ""
-            discription: ""
-            priority: ""}
-    ])
-})
 type TodoContext={
     list:Inputs[],
     setList: React.Dispatch<React.SetStateAction<Inputs[]>>
@@ -20,6 +11,8 @@ type Inputs = {
     discription: string
     priority: string
 }
+export const todoContext = createContext<TodoContext |undefined>(undefined);
+
 export interface ContextProviderProps {
     children: React.ReactNode
 }
