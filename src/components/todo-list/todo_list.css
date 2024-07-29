@@ -10,6 +10,10 @@
 .list{
    padding: .5rem;
 }
+.buttonlist{
+    border: none;
+    background:none;
+}
 .main-list{
    
     list-style: none;

@@ -16,10 +16,10 @@ function Main() {
     return (
         <div className="container-fluid">
             <div className='row'>
-                <div className='col-lg-6 col-md-6 col-sm-12  '>
+                <div className='col-lg-6 col-md-12 col-sm-12 mb-2 '>
                     <Todolist data={data1} />
                 </div>
-                <div className='col-lg-6 col-md-6 col-sm-12   '>
+                <div className='col-lg-6 col-md-12 col-sm-12   '>
                     <Detail />
                 </div>
             </div>

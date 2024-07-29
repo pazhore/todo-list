@@ -18,9 +18,10 @@ export interface ContextProviderProps {
 }
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     const [list, setList] = useState<Inputs[]>([]);
+    const [todo,setTodo]=useState<Inputs>()
     return (
         <>
-            <todoContext.Provider value={{ list, setList }}>
+            <todoContext.Provider value={{ list, setList}}>
                 {children}
             </todoContext.Provider>
         </>

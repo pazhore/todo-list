@@ -16,7 +16,6 @@
 }
 .form {
     margin-top: 1rem;
-
     padding-bottom: 0;
     padding: 1rem;
     border: #A1A3AB69 solid 1px;
@@ -34,21 +33,56 @@ input {
     margin-top: 0;
     margin-bottom: 1rem;
     width: 80%;
-    border-color: #A1A3AB69;
-    border-radius: 3px;
-    border-style: 1px solid black;
+    border: solid 2px #80858fd7;
+    border-radius: 10px;
+    outline: none;
+
+    
+}
+input[type=text]:focus {
+    border: 3px solid #e65f5f;
 }
 
 .task {
     width: 100%;
+    border: solid 2px #80858fd7;
+    border-radius: 3px;
 }
 
 .date {
     width: 100%;
+    border: solid 2px #80858fd7;
+    border-radius: 3px;
+}
+.date[type=date]:focus{
+     border: 3px solid #e65f5f;
 
 }
+input[type=radio]:focus{
+    border: 3px solid #e65f5f;
 
+}
+#low{
+    accent-color: green;
+}
+#moderate{
+
+    accent-color: rgb(247, 103, 7);
+}
+#high{
+    accent-color: red;
+
+}
 .taskdiscription {
+    border: solid 2px #80858fd7;
+    border-radius: 3px;
+    height: 6rem;
+    width: 100%;
+    outline: none;
+}
+.taskdiscription:focus {
+    border: solid 3px #e64e3ad7;
+    border-radius: 3px;
     height: 6rem;
     width: 100%;
 }
