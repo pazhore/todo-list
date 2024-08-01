@@ -8,7 +8,8 @@ function Detail() {
 
 
 
-  return (
+  return (<div>dhg</div>
+
 
       <div className="detail">
         <h1>Walk The Dog</h1>
