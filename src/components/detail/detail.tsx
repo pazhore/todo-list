@@ -8,7 +8,7 @@ function Detail() {
 
 
 
-  return (<div>dhg</div>
+  return (
 
 
       <div className="detail">
