@@ -71,7 +71,7 @@ const Addtask: React.FC = () => {
                         </div>
                     </form>
                 </Modal.Body>
-                <Modal.Footer className="">
+                <Modal.Footer >
                     <Button className="close" onClick={handleClose}>
                         Close
                     </Button>

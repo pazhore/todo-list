@@ -1,11 +1,14 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import "./detail.css";
+import { todoContext } from '../../context/context';
 
 
 
 function Detail() {
 
+  const value = useContext(todoContext);
+  console.log(value?.todo)
 
 
   return (

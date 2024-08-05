@@ -2,7 +2,9 @@
 import React, { createContext, FC, useState } from 'react';
 type TodoContext={
     list:Inputs[],
-    setList: React.Dispatch<React.SetStateAction<Inputs[]>>
+    setList: React.Dispatch<React.SetStateAction<Inputs[]>>,
+    todo:Inputs|undefined,
+    setTodo: React.Dispatch<React.SetStateAction<Inputs |undefined>>
 
 }
 type Inputs = {
@@ -18,10 +20,10 @@ export interface ContextProviderProps {
 }
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     const [list, setList] = useState<Inputs[]>([]);
-    const [todo,setTodo]=useState<Inputs>()
+    const [todo,setTodo]=useState<Inputs|undefined>()
     return (
         <>
-            <todoContext.Provider value={{ list, setList}}>
+            <todoContext.Provider value={{ list, setList,todo,setTodo}}>
                 {children}
             </todoContext.Provider>
         </>

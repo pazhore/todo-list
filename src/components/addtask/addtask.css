@@ -15,6 +15,7 @@
     text-decoration-thickness: 2px;
 }
 .form {
+    background-color: #8697C4;
     margin-top: 1rem;
     padding-bottom: 0;
     padding: 1rem;
@@ -94,5 +95,5 @@ input[type=radio]:focus{
     background: #8697C4;
 }
 .close{
-    background: #EDE8F5;
+    background-color: #6335ac !important;
 }
