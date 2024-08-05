@@ -1,11 +1,15 @@
 .detail{
    
-
-    margin: 1rem;
+    background: #8697C4;
+    color: white;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  margin: 1rem;
     border: 1px solid  #A1A3ABA1;
     padding: 1rem;
     border-radius: 10px;
     height: 100%;
+  
 }
 .list-task li{
     list-style: decimal;

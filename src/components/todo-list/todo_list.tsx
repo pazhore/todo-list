@@ -18,7 +18,7 @@ const Todolist: FC<TodolistProps> = () => {
   return (
     <>
       <div className="todolist">
-        <h6>vital task</h6>
+        <h1>All taskS</h1>
         <div className="list">
             <div className='divlist'>
             {
@@ -27,8 +27,8 @@ const Todolist: FC<TodolistProps> = () => {
                    <h5>{value.taskname}</h5>
                 <p>{value.discription}</p>
                 <ul className='sub-list d-flex justify-content-spacearound'>
-                  <li> priority:{value.priority}</li>
-                  <li>created on:{value.date}</li>
+                  <li> priority: {value.priority}</li>
+                  <li>created on: {value.date}</li>
                 </ul></li>
              
               ))

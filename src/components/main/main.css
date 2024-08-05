@@ -1,7 +1,6 @@
-.main{
-    background-color: #F5F8FF;
-    margin: 0;
+.container-fluid {
+     height: 100vh;
     padding: 0%;
-    
+    margin-bottom: .5rem; 
 
 }

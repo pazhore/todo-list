@@ -1,7 +1,7 @@
 .addtask {
     padding-top: 3rem;
     max-width: 100%;
-    background-color: #E0E0E0;
+    background-color: #000000;
     color: rgb(94, 35, 35);
 }
 .sub {
@@ -88,4 +88,11 @@ input[type=radio]:focus{
 }
 .same{
     margin-bottom: 1rem;
+}
+
+.Button{
+    background: #8697C4;
+}
+.close{
+    background: #EDE8F5;
 }

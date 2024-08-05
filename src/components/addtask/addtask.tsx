@@ -26,7 +26,7 @@ const Addtask: React.FC = () => {
     };
     return (
         <>
-            <Button variant="danger" onClick={handleShow}>
+            <Button className="Button" onClick={handleShow}>
                 +
             </Button>
             <Modal show={show} onHide={handleClose} size="lg">
@@ -71,11 +71,11 @@ const Addtask: React.FC = () => {
                         </div>
                     </form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                <Modal.Footer className="">
+                    <Button className="close" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="danger" onClick={handleSubmit(onSubmit)}>
+                    <Button variant="primary" onClick={handleSubmit(onSubmit)}>
                         ADD
                     </Button>
                 </Modal.Footer>
