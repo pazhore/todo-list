@@ -8,8 +8,6 @@ import { todoContext } from '../../context/context';
 function Detail() {
 
   const value = useContext(todoContext);
-  console.log(value?.todo)
-
 
   return (
 
