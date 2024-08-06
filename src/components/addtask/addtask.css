@@ -8,6 +8,13 @@
   background-color: #F9F9F9;
    margin: auto;
 }
+.headermodal{
+   background: #EDE8F5;
+}
+.footermodal{
+    background: #EDE8F5 !important;
+
+}
 .heading {
     display: flex;
     justify-content: space-between;
@@ -19,29 +26,35 @@
     margin-top: 1rem;
     padding-bottom: 0;
     padding: 1rem;
-    border: #A1A3AB69 solid 1px;
-    border-radius: 5px;
+    border: #e0e1e669 solid 1px;
+    border-radius: 10px;
 }
 .checkbox {
     display: flex;
     gap: 1rem;
 }
 .checkbox label {
-    color: rgb(162, 164, 167);
+    color: rgb(255, 255, 255);
 }
 
-input {
+input{
+    padding: .5rem;
     margin-top: 0;
     margin-bottom: 1rem;
     width: 80%;
     border: solid 2px #80858fd7;
-    border-radius: 10px;
+    border-radius: 10px !important;
     outline: none;
 
     
 }
 input[type=text]:focus {
     border: 3px solid #e65f5f;
+    
+}
+input[type=radio]:focus{
+    border: 3px solid #e65f5f;
+
 }
 
 .task {
@@ -59,10 +72,7 @@ input[type=text]:focus {
      border: 3px solid #e65f5f;
 
 }
-input[type=radio]:focus{
-    border: 3px solid #e65f5f;
 
-}
 #low{
     accent-color: green;
 }
@@ -75,15 +85,15 @@ input[type=radio]:focus{
 
 }
 .taskdiscription {
+    padding: .5rem;
     border: solid 2px #80858fd7;
-    border-radius: 3px;
+    border-radius: 10px;
     height: 6rem;
     width: 100%;
     outline: none;
 }
 .taskdiscription:focus {
     border: solid 3px #e64e3ad7;
-    border-radius: 3px;
     height: 6rem;
     width: 100%;
 }
@@ -91,9 +101,21 @@ input[type=radio]:focus{
     margin-bottom: 1rem;
 }
 
-.Button{
-    background: #8697C4;
+.but{
+    background-color:#5b6c99 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 .close{
-    background-color: #6335ac !important;
+    background-color: #b2cceb !important;
+    color: red !important;
+}
+.add{
+    background-color: #1c49c6 !important;
+}
+.body{
+    background-color: #afb3bf;
+}
+.modal{
+    border-radius: 10px;
 }

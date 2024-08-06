@@ -26,14 +26,14 @@ const Addtask: React.FC = () => {
     };
     return (
         <>
-            <Button className="Button" onClick={handleShow}>
+            <Button className="but" onClick={handleShow}>
                 +
             </Button>
-            <Modal show={show} onHide={handleClose} size="lg">
-                <Modal.Header closeButton>
+            <Modal className="modal" show={show} onHide={handleClose} size="lg">
+                <Modal.Header className="headermodal" closeButton>
                     <Modal.Title >ADD TASK</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className="body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form">
                             <div className="row">
@@ -49,7 +49,7 @@ const Addtask: React.FC = () => {
                                 </div>
                             </div>
                             <p className="m-0">Priority</p>
-                            <div className=' same checkbox'>
+                            <div className='same checkbox'>
                                 <div>
                                     <input type="radio" id="low" value="low" {...register("priority")} />
                                     <label htmlFor="low">Low</label>
@@ -71,11 +71,11 @@ const Addtask: React.FC = () => {
                         </div>
                     </form>
                 </Modal.Body>
-                <Modal.Footer >
+                <Modal.Footer className="footermodal" >
                     <Button className="close" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleSubmit(onSubmit)}>
+                    <Button className="add" onClick={handleSubmit(onSubmit)}>
                         ADD
                     </Button>
                 </Modal.Footer>

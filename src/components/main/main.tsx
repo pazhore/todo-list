@@ -14,7 +14,6 @@ function Main() {
         task_date: 12 / 12 / 2034,
         task_dis: "jjjjj"
     }
-    
     return (
         <div className="container-fluid bg ">
             <div className='row '>

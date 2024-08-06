@@ -2,17 +2,10 @@ import React, { useState } from 'react';
 import "../Header/header.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
-
 import { IoAdd } from "react-icons/io5";
 import Addtask from '../addtask/addtask';
 
-
-
-
 function Header() {
-
-
     return (
         <div className="header">
             <div className="title">
@@ -23,7 +16,6 @@ function Header() {
                 <div>
                     <button className='b'><Addtask /></button>
                 </div>
-                {/*  */}
             </div>
         </div>
     );

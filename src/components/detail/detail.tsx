@@ -13,15 +13,12 @@ function Detail() {
 
 
       <div className="detail">
-        <h1>Walk The Dog</h1>
-        <p className='p-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+        <h1>{value?.todo?.taskname}</h1>
+        <p> {value?.todo?.discription}</p>
         <ul className='list-task'>
-          <li>fffffffffff</li>
-          <li>fffffffffff</li>
-          <li>fffffffffff</li>
-          <li>fffffffffff</li>
-          <li>fffffffffff</li>
-          <li>fffffffffff</li>
+          <li>Created on : {value?.todo?.date}</li>
+          <li>Priority : {value?.todo?.priority}</li>
+        
 
         </ul>
       </div>
