@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Button, Modal } from "react-bootstrap";
 import React from "react";
 import { todoContext } from '../../context/context';
+import { addTodo } from "../../services/api.service";
 export type Inputs = {
     taskname: string;
     date: string;
@@ -20,7 +21,14 @@ const Addtask: React.FC = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = (data) =>{
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        try {
+            const result = await addTodo(data)
+            console.log(result)
+        } catch (error) {
+            console.error(error);
+
+        }
         setList([...list, data])
         reset();
     };
