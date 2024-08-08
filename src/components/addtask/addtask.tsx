@@ -24,13 +24,14 @@ const Addtask: React.FC = () => {
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         try {
             const result = await addTodo(data)
-            console.log(result)
+            console.log(result.id)
+            setList( result.id)
+
         } catch (error) {
             console.error(error);
-
         }
-        setList([...list, data])
-        reset();
+         
+        // reset();
     };
     return (
         <>
