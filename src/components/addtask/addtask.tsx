@@ -5,12 +5,17 @@ import { Button, Modal } from "react-bootstrap";
 import React from "react";
 import { todoContext } from '../../context/context';
 import { addTodo } from "../../services/api.service";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export type Inputs = {
     taskname: string;
     date: string;
     discription: string;
     priority: string;
 };
+
+
 const Addtask: React.FC = () => {
     const context = useContext(todoContext);
     if (!context) {
@@ -25,14 +30,25 @@ const Addtask: React.FC = () => {
         try {
             const result = await addTodo(data)
             console.log(result.id)
-            setList( result.id)
-
+            setList(result.id)
+            toast('TODO ADDED!',
+                {
+                    position: "top-left",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
         } catch (error) {
             console.error(error);
+            toast("SOMETHING ERROR OCCURRED");
         }
-         
-        // reset();
+        reset();
     };
+
     return (
         <>
             <Button className="but" onClick={handleShow}>
@@ -87,6 +103,18 @@ const Addtask: React.FC = () => {
                     <Button className="add" onClick={handleSubmit(onSubmit)}>
                         ADD
                     </Button>
+                    <ToastContainer
+                        position="top-left"
+                        autoClose={3000}
+                        hideProgressBar={true}
+                        newestOnTop={true}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
                 </Modal.Footer>
             </Modal>
         </>

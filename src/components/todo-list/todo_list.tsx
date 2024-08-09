@@ -4,7 +4,7 @@ import { Data } from '../main/main';
 import "../todo-list/todo_list.css";
 import { todoContext } from '../../context/context';
 import { addTodo, getTodo } from '../../services/api.service';
-import { useEffect } from 'react';
+import { useEffect } from 'react' ;
 
 type Task = {
   taskname: string;
@@ -27,13 +27,11 @@ const Todolist: FC<TodolistProps> = () => {
     // console.log(result)
   }
   console.log(todo)
-  useEffect(() => {
-    fetchTodoList()
-  }, [])
-
-
   // Use the context
   const detaildata = useContext(todoContext);
+  useEffect(() => {
+    fetchTodoList()
+  }, [detaildata?.list])
 
   // Handle click event with proper typing
   function handleClick(task: Task) {
