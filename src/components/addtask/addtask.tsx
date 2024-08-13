@@ -31,6 +31,7 @@ const Addtask: React.FC = () => {
             const result = await addTodo(data)
             console.log(result.id)
             setList(result.id)
+            handleClose()
             toast('TODO ADDED!',
                 {
                     position: "top-left",
@@ -54,6 +55,18 @@ const Addtask: React.FC = () => {
             <Button className="but" onClick={handleShow}>
                 +
             </Button>
+            <ToastContainer
+                        position="top-left"
+                        autoClose={3000}
+                        hideProgressBar={true}
+                        newestOnTop={true}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
             <Modal className="modal" show={show} onHide={handleClose} size="lg">
                 <Modal.Header className="headermodal" closeButton>
                     <Modal.Title >ADD TASK</Modal.Title>
@@ -103,18 +116,7 @@ const Addtask: React.FC = () => {
                     <Button className="add" onClick={handleSubmit(onSubmit)}>
                         ADD
                     </Button>
-                    <ToastContainer
-                        position="top-left"
-                        autoClose={3000}
-                        hideProgressBar={true}
-                        newestOnTop={true}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="light"
-                    />
+                    
                 </Modal.Footer>
             </Modal>
         </>

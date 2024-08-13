@@ -99,6 +99,21 @@ input[type=radio]:focus{
 }
 .same{
     margin-bottom: 1rem;
+    size: 5px;
+}
+#low{
+    size: 2px;
+    height: 1rem;
+}
+#high{
+    size: 2px;
+    height: 1rem;
+
+}
+#moderate{
+    size: 2px;
+    height: 1rem;
+
 }
 
 .but{

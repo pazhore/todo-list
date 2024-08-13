@@ -3,6 +3,7 @@ import Todolist from '../todo-list/todo_list';
 import Detail from '../detail/detail';
 import { useContext } from 'react';
 import { computeHeadingLevel } from '@testing-library/react';
+import Delete from '../delete/delete';
 export type Data = {
     task_name: string,
     task_date: number,
