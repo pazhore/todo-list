@@ -12,6 +12,7 @@ type Inputs = {
     date: string
     discription: string
     priority: string
+    id:string
 }
 export const todoContext = createContext<TodoContext |undefined>(undefined);
 

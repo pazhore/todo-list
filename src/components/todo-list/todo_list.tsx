@@ -6,13 +6,14 @@ import { todoContext } from '../../context/context';
 import { addTodo, getTodo } from '../../services/api.service';
 import { useEffect } from 'react';
 import Delete from '../delete/delete';
-import Update from '../update/update';
+
 
 type Task = {
   taskname: string;
   date: string;
   discription: string; // Use 'discription'
   priority: string;
+  id:string
 };
 
 interface TodolistProps {
@@ -27,7 +28,7 @@ const Todolist: FC<TodolistProps> = () => {
     setTodo(result)
     // console.log(result)
   }
-  console.log(todo)
+
   // Use the context
   const detaildata = useContext(todoContext);
   useEffect(() => {
@@ -37,16 +38,17 @@ const Todolist: FC<TodolistProps> = () => {
   function handleClick(task: Task) {
     detaildata?.setTodo(task);
   }
-  console.log(detaildata?.todo)
-  const handleClickDELETE = () => {
-  }
+
+ 
 
   return (
     <div className="todolist">
       <h1>All Tasks</h1>
       <div className="list">
         <div className='divlist'>
-          {todo?.map((task: { taskname: any; discription: any; priority: any; date: any; }, index: React.Key | null | undefined) => (
+          {todo?.map((task: {
+            [x: string]: any; taskname: any; discription: any; priority: any; date: any; id:any;
+}, index: React.Key | null | undefined) => (
             <div
               key={index}
               className='li'
@@ -56,8 +58,7 @@ const Todolist: FC<TodolistProps> = () => {
               <ul className='sub-list d-flex justify-content-spacearound'>
                 <li>Priority: {task.priority}</li>
                 <li>Created on: {task.date}</li>
-                <li><Delete /></li>
-
+                <li><Delete id={task.id}/></li>
               </ul>
             </div>
           ))}
