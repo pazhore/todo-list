@@ -11,7 +11,6 @@ export const getTodoById = async () => {
     return await baseApi("GET", `${baseUrl}/todolist`, "", "")
 }
 export const deleteTodoById = async (id: string) => {
-    console.log("id from api",id)
         return await baseApi("DELETE", `${baseUrl}/todolist/${id}`, "", "")
 }
 

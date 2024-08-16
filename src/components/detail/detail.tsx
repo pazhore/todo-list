@@ -22,6 +22,7 @@ const deleteValue=value?.todo
         <ul className='list-task'>
           <li>Created on : {value?.todo?.date}</li>
           <li>Priority : {value?.todo?.priority}</li>
+
           
         </ul>
       </div>

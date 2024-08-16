@@ -117,9 +117,10 @@ input[type=radio]:focus{
 }
 
 .but{
-    background-color:#5b6c99 !important;
+    background-color:#0b1533 !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+    border:none;
 }
 .close{
     background-color: #b2cceb !important;

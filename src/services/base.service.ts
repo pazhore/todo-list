@@ -16,7 +16,6 @@ export const baseApi = async (method: string, url: string, body: any, header: an
     }
   } else {
     delete reqConfig.data
-
   }
   return await axios(reqConfig).then(
     (result) => {
