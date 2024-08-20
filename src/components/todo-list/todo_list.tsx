@@ -55,10 +55,13 @@ const Todolist: FC<TodolistProps> = () => {
                 <li>Priority: {task.priority}</li>
                 <li>Created on: {task.date}</li>
                 <li><Delete id={task.id} /></li>
+                
               </ul>
+              
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

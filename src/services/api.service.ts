@@ -7,8 +7,8 @@ export const addTodo = async (body: any) => {
 export const getTodo = async () => {
     return await baseApi("GET", `${baseUrl}/todolist`, "", "")
 }
-export const getTodoById = async () => {
-    return await baseApi("GET", `${baseUrl}/todolist`, "", "")
+export const getTodoById = async (id: string) => {
+    return await baseApi("GET", `${baseUrl}/todolist/${id}`, "", "")
 }
 export const deleteTodoById = async (id: string) => {
         return await baseApi("DELETE", `${baseUrl}/todolist/${id}`, "", "")
