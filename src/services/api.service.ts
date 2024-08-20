@@ -1,6 +1,7 @@
 import { baseApi } from "./base.service";
 
-const baseUrl = "http://localhost:4000";
+
+const baseUrl = "https://jsonserver-9wo4.onrender.com";
 export const addTodo = async (body: any) => {
     return await baseApi("POST", `${baseUrl}/todolist`, body, "")
 }
